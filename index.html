@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        
+        <title>Game of War</title>
+    </head>
+
+    <body>
+        <div class="container main">
+
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <h1>WAR !</h1>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class ="col-xs-4 text-right col-sm-offset-1 side-panels active player-0-panel">
+                                <h3 class="player-name" id="name-0">Player 1</h3>
+                                <img src="Images/red_back.png" alt="cardBackBlue" class="card player1" id="card-1">
+                                <div class="player-current-box">
+                                        <div class="player-current-label">Current</div>
+                                        <div class="player-current-score" id="current-0">12</div>
+                                </div>
+                        </div>
+                        <div class="col-xs-2" id="middle">
+                                <h3 class="tie"></h3>
+                                <!-- <button class="btn-new"><i class="ion-ios-plus-outline"></i>New Deal</button> -->
+                                <button class="btn-deal"><i class="ion-ios-loop"></i>Deal Card</button>
+                                <!-- <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button> -->
+                                <!-- <input type="text" placeholder="Final score" class="final-score"> -->
+                        </div>
+                        <div class ="col-xs-4 side-panels player-1-panel">
+                                <h3 class="player-name" id="name-1">Player 2</h3>
+                                <img src="Images/red_back.png" alt="cardBackRed" class="card player2" id="card-2">
+                                <div class="player-current-box">
+                                        <div class="player-current-label">Current</div>
+                                        <div class="player-current-score" id="current-1">22</div>
+                                </div>
+                        </div>
+                    </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

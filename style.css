@@ -51,8 +51,10 @@ body {
 
 #card-1 {
 margin-right: 70px;
+/* margin: auto; */
 }
 #card-2 {
+    /* margin: auto; */
     margin-left: 70px;
 }
 
@@ -125,3 +127,4 @@ i {
     font-weight: 300; color: #EB4D4D;
     text-align: center;
 }
+

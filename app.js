@@ -1,7 +1,6 @@
 
 
-var scores, currentScore1, currentScore2, card, cardValue;
-activePlayer = 0;
+var scores, currentScore1, currentScore2, card, cardValue, gamePlaying;
 cardDOM =  document.querySelector('.card');
 cardDOM2 =  document.querySelector('.player2');
 cardValue = [1,2,3,4,5,6,7,8,9,10,11,12,13];
@@ -14,6 +13,7 @@ currentScore2 = 0;
 
 var num = 'Img/card-' + card + '-';
 
+init();
 
 document.querySelector(".btn-deal").addEventListener("click", function() {
   function card1() {
@@ -118,13 +118,39 @@ function winner() {
                                ); 
                            }
                             //select player that has higher card and display winner to specific player!
+                            endGame();
                         }
                   
     
     
 
+function endGame() {
+  if(currentScore1 === 3) { //change to 10 
+    console.log("Player 1 won the game!")
+    //display winner of the game!
+    document.querySelector('#name-0').textContent = 'Winner!!!!';
+    document.querySelector(".player-0-panel").classList.add("winner");
 
+  } else {
+    currentScore2 === 3;
+    document.querySelector("#name-1").textContent = "Winner!!!!";
+    document.querySelector(".player-1-panel").classList.add("winner");
+  }
+  gamePlaying = false;
+}
 
+function init() {
+  
+  gamePlaying = true;
+
+  document.getElementById("current-0").textContent = "0";
+  document.getElementById("current-1").textContent = "0";
+
+  document.getElementById("name-0").textContent = "Player 1";
+  document.getElementById("name-1").textContent = "Player 2";
+  document.querySelector(".player-0-panel").classList.remove("winner");
+  document.querySelector(".player-1-panel").classList.remove("winner");
+}
 
 
 

@@ -81,7 +81,7 @@ document.querySelector(".btn-deal").addEventListener("click", function() {
   }
   card2();
   winner();
-    });
+});
 
    // Determine a Winner:
 function winner() {
@@ -119,29 +119,36 @@ function winner() {
                            }
                             //select player that has higher card and display winner to specific player!
                             endGame();
+                            
                         }
+                        
                   
     
     
 
 function endGame() {
-  if(currentScore1 === 3) { //change to 10 
-    console.log("Player 1 won the game!")
+  if (currentScore1 === 3) {
+    //change to 10
+    console.log("Player 1 won the game!");
     //display winner of the game!
-    document.querySelector('#name-0').textContent = 'Winner!!!!';
+    document.querySelector("#name-0").textContent = "Winner!!!!";
     document.querySelector(".player-0-panel").classList.add("winner");
-
-  } else {
-    currentScore2 === 3;
+    document.querySelector(".btn-deal").textContent = ""; //may have to find another way - btn does not reappear after
+  } else if (currentScore2 === 3) {
     document.querySelector("#name-1").textContent = "Winner!!!!";
     document.querySelector(".player-1-panel").classList.add("winner");
+    document.querySelector(".btn-deal").textContent = ""; //may have to find another way - btn does not reappear after
   }
+ 
   gamePlaying = false;
+ 
+
+
 }
 
 function init() {
   
-  gamePlaying = true;
+  gamePlaying = true; //not sure how to use this to indicate state yet. 
 
   document.getElementById("current-0").textContent = "0";
   document.getElementById("current-1").textContent = "0";
@@ -152,7 +159,15 @@ function init() {
   document.querySelector(".player-1-panel").classList.remove("winner");
 }
 
+document.querySelector('.btn-new').addEventListener('click', function(){
+  document.getElementById("current-0").textContent = "0";
+  document.getElementById("current-1").textContent = "0";
+  document.querySelector("#name-0").textContent = "PLayer 1";
+  document.querySelector("#name-1").textContent = "PLayer 2";
+  document.querySelector(".player-0-panel").classList.remove("winner");
+  document.querySelector(".player-1-panel").classList.remove("winner");
 
+})
 
 
 

@@ -133,23 +133,19 @@ function endGame() {
     //display winner of the game!
     document.querySelector("#name-0").textContent = "Winner!!!!";
     document.querySelector(".player-0-panel").classList.add("winner");
-    document.querySelector(".btn-deal").textContent = ""; //may have to find another way - btn does not reappear after
+     document.querySelector(".btn-deal").disabled = true; //may have to find another way - btn does not reappear after
   } else if (currentScore2 === 3) {
     document.querySelector("#name-1").textContent = "Winner!!!!";
     document.querySelector(".player-1-panel").classList.add("winner");
-    document.querySelector(".btn-deal").textContent = ""; //may have to find another way - btn does not reappear after
+    document.querySelector(".btn-deal").disabled = true; //may have to find another way - btn does not reappear after
   }
  
   gamePlaying = false;
- 
-
-
 }
 
-function init() {
-  
-  gamePlaying = true; //not sure how to use this to indicate state yet. 
-
+document.querySelector(".btn-new").addEventListener("click", function() {
+  currentScore1 = 0;
+  currentScore2 = 0;
   document.getElementById("current-0").textContent = "0";
   document.getElementById("current-1").textContent = "0";
 
@@ -157,17 +153,25 @@ function init() {
   document.getElementById("name-1").textContent = "Player 2";
   document.querySelector(".player-0-panel").classList.remove("winner");
   document.querySelector(".player-1-panel").classList.remove("winner");
-}
+  document.querySelector(".btn-deal").disabled = false;
+});
 
-document.querySelector('.btn-new').addEventListener('click', function(){
+function init() {
+  currentScore1 = 0;
+  currentScore2 = 0;
+  gamePlaying = true; //not sure how to use this to indicate state yet. 
+
   document.getElementById("current-0").textContent = "0";
   document.getElementById("current-1").textContent = "0";
-  document.querySelector("#name-0").textContent = "PLayer 1";
-  document.querySelector("#name-1").textContent = "PLayer 2";
+  
+  document.getElementById("name-0").textContent = "Player 1";
+  document.getElementById("name-1").textContent = "Player 2";
   document.querySelector(".player-0-panel").classList.remove("winner");
   document.querySelector(".player-1-panel").classList.remove("winner");
+  document.querySelector(".btn-deal").disabled = false;
+}
 
-})
+
 
 
 

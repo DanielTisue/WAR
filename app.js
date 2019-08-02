@@ -1,4 +1,5 @@
-
+//GAME RULES:
+//Hti the 'DEAL CARD' button to deal cards for both players. Like the Casino game WAR- highest card wins! Game is set to 25pts. Whomever reaches 25 pts first wins the game. Hit 'NEW GAME' to start a new game and scores reset to zero.
 
 var currentScore1, currentScore2, card, cardValue;
 cardDOM =  document.querySelector('.card');
@@ -138,6 +139,9 @@ document.querySelector(".btn-new").addEventListener("click", function() {
 
   document.querySelector(".player-0-panel").classList.remove("winner");
   document.querySelector(".player-1-panel").classList.remove("winner");
+ 
+  document.getElementById("card-1").src = "Images/red_back.png";
+  document.getElementById("card-2").src = "Images/red_back.png";
 
   document.querySelector(".btn-deal").disabled = false;
 });

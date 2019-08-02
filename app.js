@@ -95,15 +95,15 @@ function winner() {
                         if(x === y){
 //no winner and nothing changes
                              
-                          console.log("tie"); 
+                          // console.log("tie"); 
                         } else if ( x > y) {
                                currentScore1++;
                                player1Score.textContent = currentScore1;
-                               console.log("Player 1 is the winner"); 
+                              //  console.log("Player 1 is the winner"); 
                            } else if (x < y){
                                currentScore2++;
                                player2Score.textContent = currentScore2;
-                               console.log("Player 2 is the winner"); 
+                              //  console.log("Player 2 is the winner"); 
                            }
 //Display winner to specific player!
                             endGame();
